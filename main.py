@@ -9,7 +9,7 @@ import requests
 
 app = FastAPI(title="Ashgrove Mock Services")
 
-# Sanal Veritabanı
+# Sanal Veritabanı (50 Kayıtlı Test Havuzu)
 fake_db = {
     "deals": {
         "HS-88214": {
@@ -23,7 +23,55 @@ fake_db = {
             "dealstage": "positive",
             "lastmodifieddate": datetime.utcnow().isoformat(),
             "properties": {}
-        }
+        },
+        "HS-1001": {"id": "HS-1001", "dealstage": "new_lead", "lastmodifieddate": datetime.utcnow().isoformat(), "properties": {}},
+        "HS-1002": {"id": "HS-1002", "dealstage": "new_lead", "lastmodifieddate": datetime.utcnow().isoformat(), "properties": {}},
+        "HS-1003": {"id": "HS-1003", "dealstage": "new_lead", "lastmodifieddate": datetime.utcnow().isoformat(), "properties": {}},
+        "HS-1004": {"id": "HS-1004", "dealstage": "new_lead", "lastmodifieddate": datetime.utcnow().isoformat(), "properties": {}},
+        "HS-1005": {"id": "HS-1005", "dealstage": "new_lead", "lastmodifieddate": datetime.utcnow().isoformat(), "properties": {}},
+        "HS-1006": {"id": "HS-1006", "dealstage": "new_lead", "lastmodifieddate": datetime.utcnow().isoformat(), "properties": {}},
+        "HS-1007": {"id": "HS-1007", "dealstage": "new_lead", "lastmodifieddate": datetime.utcnow().isoformat(), "properties": {}},
+        "HS-1008": {"id": "HS-1008", "dealstage": "new_lead", "lastmodifieddate": datetime.utcnow().isoformat(), "properties": {}},
+        "HS-1009": {"id": "HS-1009", "dealstage": "new_lead", "lastmodifieddate": datetime.utcnow().isoformat(), "properties": {}},
+        "HS-1010": {"id": "HS-1010", "dealstage": "new_lead", "lastmodifieddate": datetime.utcnow().isoformat(), "properties": {}},
+        "HS-1011": {"id": "HS-1011", "dealstage": "new_lead", "lastmodifieddate": datetime.utcnow().isoformat(), "properties": {}},
+        "HS-1012": {"id": "HS-1012", "dealstage": "new_lead", "lastmodifieddate": datetime.utcnow().isoformat(), "properties": {}},
+        "HS-1013": {"id": "HS-1013", "dealstage": "new_lead", "lastmodifieddate": datetime.utcnow().isoformat(), "properties": {}},
+        "HS-1014": {"id": "HS-1014", "dealstage": "new_lead", "lastmodifieddate": datetime.utcnow().isoformat(), "properties": {}},
+        "HS-1015": {"id": "HS-1015", "dealstage": "new_lead", "lastmodifieddate": datetime.utcnow().isoformat(), "properties": {}},
+        "HS-1016": {"id": "HS-1016", "dealstage": "new_lead", "lastmodifieddate": datetime.utcnow().isoformat(), "properties": {}},
+        "HS-1017": {"id": "HS-1017", "dealstage": "new_lead", "lastmodifieddate": datetime.utcnow().isoformat(), "properties": {}},
+        "HS-1018": {"id": "HS-1018", "dealstage": "new_lead", "lastmodifieddate": datetime.utcnow().isoformat(), "properties": {}},
+        "HS-1019": {"id": "HS-1019", "dealstage": "new_lead", "lastmodifieddate": datetime.utcnow().isoformat(), "properties": {}},
+        "HS-1020": {"id": "HS-1020", "dealstage": "new_lead", "lastmodifieddate": datetime.utcnow().isoformat(), "properties": {}},
+        "HS-1021": {"id": "HS-1021", "dealstage": "new_lead", "lastmodifieddate": datetime.utcnow().isoformat(), "properties": {}},
+        "HS-1022": {"id": "HS-1022", "dealstage": "new_lead", "lastmodifieddate": datetime.utcnow().isoformat(), "properties": {}},
+        "HS-1023": {"id": "HS-1023", "dealstage": "new_lead", "lastmodifieddate": datetime.utcnow().isoformat(), "properties": {}},
+        "HS-1024": {"id": "HS-1024", "dealstage": "new_lead", "lastmodifieddate": datetime.utcnow().isoformat(), "properties": {}},
+        "HS-1025": {"id": "HS-1025", "dealstage": "new_lead", "lastmodifieddate": datetime.utcnow().isoformat(), "properties": {}},
+        "HS-1026": {"id": "HS-1026", "dealstage": "new_lead", "lastmodifieddate": datetime.utcnow().isoformat(), "properties": {}},
+        "HS-1027": {"id": "HS-1027", "dealstage": "new_lead", "lastmodifieddate": datetime.utcnow().isoformat(), "properties": {}},
+        "HS-1028": {"id": "HS-1028", "dealstage": "new_lead", "lastmodifieddate": datetime.utcnow().isoformat(), "properties": {}},
+        "HS-1029": {"id": "HS-1029", "dealstage": "new_lead", "lastmodifieddate": datetime.utcnow().isoformat(), "properties": {}},
+        "HS-1030": {"id": "HS-1030", "dealstage": "new_lead", "lastmodifieddate": datetime.utcnow().isoformat(), "properties": {}},
+        "HS-1031": {"id": "HS-1031", "dealstage": "new_lead", "lastmodifieddate": datetime.utcnow().isoformat(), "properties": {}},
+        "HS-1032": {"id": "HS-1032", "dealstage": "new_lead", "lastmodifieddate": datetime.utcnow().isoformat(), "properties": {}},
+        "HS-1033": {"id": "HS-1033", "dealstage": "new_lead", "lastmodifieddate": datetime.utcnow().isoformat(), "properties": {}},
+        "HS-1034": {"id": "HS-1034", "dealstage": "new_lead", "lastmodifieddate": datetime.utcnow().isoformat(), "properties": {}},
+        "HS-1035": {"id": "HS-1035", "dealstage": "new_lead", "lastmodifieddate": datetime.utcnow().isoformat(), "properties": {}},
+        "HS-1036": {"id": "HS-1036", "dealstage": "new_lead", "lastmodifieddate": datetime.utcnow().isoformat(), "properties": {}},
+        "HS-1037": {"id": "HS-1037", "dealstage": "new_lead", "lastmodifieddate": datetime.utcnow().isoformat(), "properties": {}},
+        "HS-1038": {"id": "HS-1038", "dealstage": "new_lead", "lastmodifieddate": datetime.utcnow().isoformat(), "properties": {}},
+        "HS-1039": {"id": "HS-1039", "dealstage": "new_lead", "lastmodifieddate": datetime.utcnow().isoformat(), "properties": {}},
+        "HS-1040": {"id": "HS-1040", "dealstage": "new_lead", "lastmodifieddate": datetime.utcnow().isoformat(), "properties": {}},
+        "HS-1041": {"id": "HS-1041", "dealstage": "new_lead", "lastmodifieddate": datetime.utcnow().isoformat(), "properties": {}},
+        "HS-1042": {"id": "HS-1042", "dealstage": "new_lead", "lastmodifieddate": datetime.utcnow().isoformat(), "properties": {}},
+        "HS-1043": {"id": "HS-1043", "dealstage": "new_lead", "lastmodifieddate": datetime.utcnow().isoformat(), "properties": {}},
+        "HS-1044": {"id": "HS-1044", "dealstage": "new_lead", "lastmodifieddate": datetime.utcnow().isoformat(), "properties": {}},
+        "HS-1045": {"id": "HS-1045", "dealstage": "new_lead", "lastmodifieddate": datetime.utcnow().isoformat(), "properties": {}},
+        "HS-1046": {"id": "HS-1046", "dealstage": "new_lead", "lastmodifieddate": datetime.utcnow().isoformat(), "properties": {}},
+        "HS-1047": {"id": "HS-1047", "dealstage": "positive", "lastmodifieddate": datetime.utcnow().isoformat(), "properties": {}},
+        "HS-1048": {"id": "HS-1048", "dealstage": "positive", "lastmodifieddate": datetime.utcnow().isoformat(), "properties": {}}
     },
     "activities": []
 }
@@ -48,7 +96,7 @@ class EventSimulator(BaseModel):
 
 @app.get("/")
 def read_root():
-    return {"status": "Ashgrove Mock API çalışıyor, tüm endpointler aktif!"}
+    return {"status": "Ashgrove Mock Services çalışıyor, tüm endpointler aktif!"}
 
 # 0. CRM Mock: Contact Bilgisini Getirme
 @app.get("/crm/v3/objects/contacts/{contact_id}")
@@ -191,4 +239,3 @@ def get_dashboard():
     </html>
     """
     return html_content
-    
